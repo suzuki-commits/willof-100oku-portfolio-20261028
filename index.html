@@ -1,0 +1,2142 @@
+<!doctype html>
+<html lang="ja" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>ウィルオブ 100億円ポートフォリオ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #f7f6f3;
+        --surface: #ffffff;
+        --ink: #221714;
+        --ink2: #463b37;
+        --muted: #625955;
+        --line: #e2ddd8;
+        --soft: #eef4fa;
+        --soft2: #fff1ec;
+        --brand: #0068b6;
+        --accent: #fb4113;
+        --grow: #0068b6;
+        --change: #fb4113;
+        --buy: #00917c;
+        --trim: #a86f00;
+        --pos: #00917c;
+        --neg: #fb4113;
+        --total: #0068b6;
+        --sub: #221714;
+        --fact: #0068b6;
+        --est: #a86f00;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) {
+          --bg: #121110;
+          --surface: #1a1a19;
+          --ink: #f2eeea;
+          --ink2: #d9d2cc;
+          --muted: #b3aaa4;
+          --line: #35312e;
+          --soft: #16263a;
+          --soft2: #33201a;
+          --brand: #3d8fd6;
+          --accent: #f2552e;
+          --grow: #3d8fd6;
+          --change: #f2552e;
+          --buy: #14a08a;
+          --trim: #c08a1a;
+          --pos: #14a08a;
+          --neg: #f2552e;
+          --total: #3d8fd6;
+          --sub: #f2eeea;
+          --fact: #3d8fd6;
+          --est: #c08a1a;
+        }
+      }
+      :root[data-theme="dark"] {
+        --bg: #121110;
+        --surface: #1a1a19;
+        --ink: #f2eeea;
+        --ink2: #d9d2cc;
+        --muted: #b3aaa4;
+        --line: #35312e;
+        --soft: #16263a;
+        --soft2: #33201a;
+        --brand: #3d8fd6;
+        --accent: #f2552e;
+        --grow: #3d8fd6;
+        --change: #f2552e;
+        --buy: #14a08a;
+        --trim: #c08a1a;
+        --pos: #14a08a;
+        --neg: #f2552e;
+        --total: #3d8fd6;
+        --sub: #f2eeea;
+        --fact: #3d8fd6;
+        --est: #c08a1a;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family:
+          "Noto Sans JP", "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif;
+        font-size: 17px;
+        line-height: 1.8;
+        font-feature-settings: "palt" 1;
+      }
+      a {
+        color: var(--brand);
+        word-break: break-all;
+      }
+      .wrap {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+      header.hero {
+        background: var(--brand);
+        color: #fff;
+        padding: 56px 0 48px;
+      }
+      header.hero .kicker {
+        font-size: 17px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        opacity: 0.95;
+      }
+      header.hero h1 {
+        font-size: 40px;
+        line-height: 1.35;
+        margin: 12px 0 16px;
+        font-weight: 900;
+      }
+      header.hero p {
+        font-size: 18px;
+        margin: 0;
+        max-width: 860px;
+      }
+      header.hero .meta {
+        margin-top: 24px;
+        font-size: 17px;
+        opacity: 0.95;
+      }
+      nav.toc {
+        background: var(--surface);
+        border-bottom: 1px solid var(--line);
+      }
+      nav.toc .wrap {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 20px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+      }
+      nav.toc a {
+        font-size: 17px;
+        text-decoration: none;
+        color: var(--ink2);
+        font-weight: 500;
+      }
+      nav.toc a:hover {
+        color: var(--brand);
+      }
+      section {
+        padding: 56px 0 8px;
+      }
+      h2 {
+        font-size: 30px;
+        line-height: 1.4;
+        margin: 0 0 8px;
+        font-weight: 900;
+      }
+      h2 .num {
+        color: var(--accent);
+        margin-right: 10px;
+      }
+      .lead {
+        font-size: 18px;
+        color: var(--ink2);
+        margin: 0 0 28px;
+      }
+      h3 {
+        font-size: 24px;
+        line-height: 1.45;
+        margin: 36px 0 12px;
+        font-weight: 700;
+      }
+      p {
+        margin: 0 0 16px;
+      }
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 24px 26px;
+        margin: 0 0 20px;
+      }
+      .verdict {
+        border-left: 8px solid var(--accent);
+        background: var(--surface);
+        border-radius: 12px;
+        padding: 24px 26px;
+        margin: 0 0 24px;
+      }
+      .verdict .label {
+        font-size: 17px;
+        font-weight: 700;
+        color: var(--accent);
+      }
+      .verdict .big {
+        font-size: 26px;
+        font-weight: 900;
+        line-height: 1.5;
+        margin: 6px 0 0;
+      }
+      .tiles {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        margin: 0 0 28px;
+      }
+      .tile {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 20px;
+      }
+      .tile .t {
+        font-size: 17px;
+        color: var(--ink2);
+        font-weight: 500;
+      }
+      .tile .v {
+        font-size: 40px;
+        font-weight: 900;
+        line-height: 1.2;
+        margin: 6px 0 2px;
+      }
+      .tile .v small {
+        font-size: 20px;
+        font-weight: 700;
+        margin-left: 2px;
+      }
+      .tile .n {
+        font-size: 17px;
+        color: var(--muted);
+      }
+      .tile.hl {
+        border: 2px solid var(--brand);
+      }
+      .tile.hl .v {
+        color: var(--brand);
+      }
+      ol.points {
+        margin: 0;
+        padding-left: 1.4em;
+      }
+      ol.points li {
+        margin: 0 0 14px;
+      }
+      ol.points li b {
+        color: var(--ink);
+      }
+      .tbl {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 0 0 20px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: var(--surface);
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        min-width: 640px;
+        font-size: 17px;
+      }
+      th,
+      td {
+        padding: 12px 14px;
+        border-bottom: 1px solid var(--line);
+        text-align: left;
+        vertical-align: top;
+      }
+      th {
+        background: var(--soft);
+        font-weight: 700;
+        color: var(--ink);
+        white-space: nowrap;
+      }
+      td:first-child {
+        min-width: 10em;
+      }
+      tr:last-child td {
+        border-bottom: none;
+      }
+      td.r,
+      th.r {
+        text-align: right;
+        white-space: nowrap;
+        font-variant-numeric: tabular-nums;
+      }
+      tr.em td {
+        background: var(--soft2);
+        font-weight: 700;
+      }
+      .badge {
+        display: inline-block;
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 1.3;
+        padding: 2px 10px;
+        border-radius: 999px;
+        border: 1.5px solid currentColor;
+        white-space: nowrap;
+        vertical-align: 1px;
+      }
+      .b-fact {
+        color: var(--fact);
+      }
+      .b-est {
+        color: var(--est);
+      }
+      .b-2nd {
+        color: var(--muted);
+      }
+      .note {
+        font-size: 17px;
+        color: var(--muted);
+        margin: -8px 0 20px;
+      }
+      .grid2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+      .roles {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+      .role {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-left: 8px solid var(--c);
+        border-radius: 12px;
+        padding: 22px 24px;
+      }
+      .role .head {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 6px 14px;
+        margin-bottom: 8px;
+      }
+      .role .tag {
+        font-weight: 900;
+        color: var(--c);
+        font-size: 20px;
+      }
+      .role h4 {
+        font-size: 24px;
+        margin: 0;
+        font-weight: 900;
+        line-height: 1.4;
+      }
+      .role .kpi {
+        background: var(--bg);
+        border-radius: 8px;
+        padding: 12px 16px;
+        margin: 10px 0 12px;
+        font-weight: 500;
+      }
+      .role ul {
+        margin: 0 0 6px;
+        padding-left: 1.3em;
+      }
+      .role li {
+        margin: 0 0 8px;
+      }
+      .role .why {
+        color: var(--ink2);
+        margin: 8px 0 0;
+      }
+      .c-grow {
+        --c: var(--grow);
+      }
+      .c-change {
+        --c: var(--change);
+      }
+      .c-buy {
+        --c: var(--buy);
+      }
+      .c-trim {
+        --c: var(--trim);
+      }
+      .c-ai {
+        --c: var(--ink2);
+      }
+      .legend {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 20px;
+        margin: 0 0 16px;
+        font-size: 17px;
+        color: var(--ink2);
+      }
+      .legend span {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .legend i {
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        border-radius: 3px;
+        background: var(--c);
+      }
+      /* waterfall */
+      .wf {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 22px 24px 14px;
+        margin: 0 0 20px;
+      }
+      .wf-row {
+        display: grid;
+        grid-template-columns: 260px 1fr;
+        gap: 14px;
+        align-items: center;
+        padding: 7px 0;
+      }
+      .wf-lab {
+        font-size: 17px;
+        line-height: 1.45;
+        color: var(--ink);
+      }
+      .wf-lab.tot {
+        font-weight: 700;
+      }
+      .wf-track {
+        position: relative;
+        height: 30px;
+      }
+      .wf-bar {
+        position: absolute;
+        top: 2px;
+        height: 26px;
+        border-radius: 4px;
+      }
+      .wf-bar.up {
+        background: var(--pos);
+      }
+      .wf-bar.down {
+        background: var(--neg);
+      }
+      .wf-bar.total {
+        background: var(--total);
+      }
+      .wf-bar.sub {
+        background: var(--sub);
+      }
+      .wf-val {
+        position: absolute;
+        top: 0;
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 30px;
+        white-space: nowrap;
+        color: var(--ink);
+        background: var(--surface);
+        padding: 0 4px;
+        z-index: 2;
+      }
+      .wf-target {
+        z-index: 1;
+        position: absolute;
+        top: -6px;
+        bottom: -6px;
+        border-left: 2px dashed var(--accent);
+      }
+      .wf-axis {
+        display: grid;
+        grid-template-columns: 260px 1fr;
+        gap: 14px;
+        margin-top: 6px;
+      }
+      .wf-ticks {
+        position: relative;
+        height: 24px;
+        border-top: 1px solid var(--line);
+      }
+      .wf-ticks span {
+        position: absolute;
+        top: 2px;
+        transform: translateX(-50%);
+        font-size: 17px;
+        color: var(--muted);
+        line-height: 1.2;
+      }
+      /* yearly bars */
+      .yb {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 22px 24px 16px;
+        margin: 0 0 20px;
+      }
+      .yb-plot {
+        position: relative;
+        height: 300px;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 12px;
+        align-items: end;
+        border-bottom: 1px solid var(--line);
+        margin-top: 36px;
+      }
+      .yb-col {
+        position: relative;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      .yb-bar {
+        width: 64%;
+        max-width: 72px;
+        border-radius: 4px 4px 0 0;
+        background: var(--total);
+      }
+      .yb-bar.act {
+        background: var(--sub);
+      }
+      .yb-bar.fc {
+        background: var(--total);
+        opacity: 0.6;
+      }
+      .yb-v {
+        font-size: 17px;
+        font-weight: 700;
+        margin-bottom: 4px;
+        white-space: nowrap;
+      }
+      .yb-x {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 12px;
+        margin-top: 8px;
+      }
+      .yb-x div {
+        text-align: center;
+        font-size: 17px;
+        line-height: 1.35;
+        color: var(--ink2);
+      }
+      .yb-line {
+        position: absolute;
+        left: 0;
+        right: 0;
+        border-top: 2px dashed var(--accent);
+      }
+      .yb-line span {
+        position: absolute;
+        left: 0;
+        top: -28px;
+        font-size: 17px;
+        font-weight: 700;
+        color: var(--accent);
+        background: var(--surface);
+        padding: 0 6px;
+      }
+      .yb-line.mtp {
+        border-top-color: var(--muted);
+      }
+      .yb-line.mtp span {
+        color: var(--muted);
+      }
+      .phase {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        margin: 0 0 20px;
+      }
+      .phase .card {
+        margin: 0;
+      }
+      .phase .when {
+        font-weight: 700;
+        color: var(--brand);
+      }
+      .phase h4 {
+        font-size: 24px;
+        margin: 4px 0 10px;
+        line-height: 1.4;
+      }
+      .phase ul {
+        margin: 0;
+        padding-left: 1.3em;
+      }
+      .phase li {
+        margin: 0 0 8px;
+      }
+      .src li {
+        margin: 0 0 10px;
+        word-break: break-all;
+      }
+      footer {
+        padding: 48px 0 64px;
+        color: var(--muted);
+        font-size: 17px;
+      }
+      @media (max-width: 900px) {
+        .tiles {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .phase {
+          grid-template-columns: 1fr;
+        }
+        .grid2 {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 640px) {
+        .wrap {
+          padding: 0 16px;
+        }
+        header.hero {
+          padding: 40px 0 32px;
+        }
+        header.hero h1 {
+          font-size: 30px;
+        }
+        h2 {
+          font-size: 26px;
+        }
+        h3 {
+          font-size: 24px;
+        }
+        .tile .v {
+          font-size: 32px;
+        }
+        .card,
+        .verdict,
+        .role,
+        .wf,
+        .yb {
+          padding: 18px 16px;
+        }
+        .verdict .big {
+          font-size: 22px;
+        }
+        .wf-row {
+          grid-template-columns: 1fr;
+          gap: 2px;
+          padding: 6px 0;
+        }
+        .wf-axis {
+          grid-template-columns: 1fr;
+        }
+        .wf-axis > div:first-child {
+          display: none;
+        }
+        .yb-plot {
+          gap: 6px;
+          height: 260px;
+        }
+        .yb-x {
+          gap: 6px;
+        }
+        .yb-bar {
+          width: 78%;
+        }
+        .yb-v {
+          font-size: 17px;
+        }
+        .yb-x div {
+          font-size: 17px;
+        }
+        .yb-x .yy {
+          display: none;
+        }
+        .yb-line span {
+          display: none;
+        }
+      }
+      @media (min-width: 641px) {
+        .yb-leg-line {
+          display: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="wrap">
+        <div class="kicker">
+          経営ポートフォリオ戦略レポート（公開情報に基づく外部分析）
+        </div>
+        <h1>
+          新生「ウィルオブ」が5年で営業利益100億円を超えるための事業ポートフォリオ
+        </h1>
+        <p>
+          対象：株式会社ウィルオブ・ワーク（2027年4月1日にウィルオブ・コンストラクションを吸収合併し、「株式会社ウィルオブ」へ商号変更予定）を中核とする、ウィルグループの国内Working事業。目標年度は2031年3月期です。
+        </p>
+        <div class="meta">
+          2026年10月28日　作成：株式会社コミクス 代表取締役 鈴木章裕
+        </div>
+      </div>
+    </header>
+
+    <nav class="toc">
+      <div class="wrap">
+        <a href="#s1">1. 結論</a><a href="#s2">2. どの100億円か</a
+        ><a href="#s3">3. 現状診断</a><a href="#s4">4. 外部環境</a
+        ><a href="#s5">5. 他社の稼ぎ方</a><a href="#s6">6. ポートフォリオ</a
+        ><a href="#s7">7. 100億円への道筋</a><a href="#s8">8. 資金計画</a
+        ><a href="#s9">9. 崩れる前提</a><a href="#s10">10. 実行計画</a
+        ><a href="#s11">出典</a>
+      </div>
+    </nav>
+
+    <main class="wrap">
+      <!-- 1 -->
+      <section id="s1">
+        <h2><span class="num">1</span>結論</h2>
+        <p class="lead">
+          この資料では、出典のある数字に
+          <span class="badge b-fact">事実</span>、当方の前提で置いた数字に
+          <span class="badge b-est">試算</span> の印を付けています。
+        </p>
+
+        <div class="verdict">
+          <div class="label">判定</div>
+          <div class="big">
+            国内Workingのセグメント利益で見れば届きます（基本シナリオ106億円）。ただし、中期経営計画の延長だけでは約76億円で止まります。残り約30億円は「AIで販管費を下げる」「M&Aで約17億円の利益を買う」の2つが決め手で、余裕は小さい計画です。連結では約99億円で、連結100億円には国内で約107億円が必要です。
+          </div>
+        </div>
+
+        <div class="tiles">
+          <div class="tile">
+            <div class="t">国内Working利益（2026年3月期）</div>
+            <div class="v">35.7<small>億円</small></div>
+            <div class="n">
+              <span class="badge b-fact">事実</span> 100億円まで2.8倍
+            </div>
+          </div>
+          <div class="tile">
+            <div class="t">中期経営計画の延長線（2031年3月期）</div>
+            <div class="v">76<small>億円</small></div>
+            <div class="n">
+              <span class="badge b-est">試算</span> 約30億円足りない
+            </div>
+          </div>
+          <div class="tile hl">
+            <div class="t">本計画の基本シナリオ（2031年3月期）</div>
+            <div class="v">106<small>億円</small></div>
+            <div class="n">
+              <span class="badge b-est">試算</span> 保守70／強気126
+            </div>
+          </div>
+          <div class="tile">
+            <div class="t">5年間のM&A投資</div>
+            <div class="v">170<small>億円</small></div>
+            <div class="n">
+              <span class="badge b-est">試算</span> 中計は3年100億円
+            </div>
+          </div>
+        </div>
+
+        <ol class="points">
+          <li>
+            <b>100億円は「国内Workingのセグメント利益」で数えるのが妥当です。</b
+            >ウィルオブ・ワーク単体（日本基準）の営業利益は4.22億円で、100億円まで24倍。親会社への本社費負担などで数字が動くため、戦略の物差しには向きません。グループ連結で読んでも、国内で約107億円が必要になるので結論は同じです。
+          </li>
+          <li>
+            <b>出発点は「自力の延長では届かない」ことです。</b
+            >中期経営計画「WILL-being
+            2029」は2029年3月期に国内Working利益54億円。この伸びを2031年3月期まで延ばすと約76億円です。
+          </li>
+          <li>
+            <b>不足約30億円は4つの上積みで埋めます。</b
+            >AIによる販管費の約5%圧縮（+11億円）、単価と案件構成の入れ替え（+4億円）、コールセンターの「AI×有人」BPO化などの新事業（+6億円）、M&A（+17億円）です。ここから逆風分（−8億円）を差し引いて約106億円になります。
+          </li>
+          <li>
+            <b
+              >ポートフォリオの形は「伸ばす3本・変える1本・買う・絞る」に、横断のAIオペレーションを加えた構成です。</b
+            >伸ばすのは正社員派遣／請負・外国人HR・人材紹介、変えるのはコール／セールス、絞るのは料金を上げられない一般派遣・保育・定型コールです。
+          </li>
+          <li>
+            <b>達成に必要な条件は次の3つです。</b
+            >M&A枠を3年100億円から5年約170億円へ広げること、販管費÷売上総利益を81%から約70%へ下げること、そして2031年3月期に正社員派遣／請負1.4万人・外国人雇用支援1.5万人・紹介入社1万人に達することです。最も崩れやすい前提は、外国人雇用支援の年26%成長とM&Aの実行時期です。
+          </li>
+        </ol>
+      </section>
+
+      <!-- 2 -->
+      <section id="s2">
+        <h2><span class="num">2</span>どの「営業利益100億円」か</h2>
+        <p class="lead">
+          同じ会社でも、どの決算で数えるかで出発点が4倍以上違います。最初にここを経営会議で確定させることが、計画の第一歩です。
+        </p>
+        <div class="tbl">
+          <table>
+            <thead>
+              <tr>
+                <th>物差し</th>
+                <th class="r">2026年3月期 売上</th>
+                <th class="r">営業利益</th>
+                <th class="r">100億円まで</th>
+                <th>扱い</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>ウィルオブ・ワーク単体（日本基準）</td>
+                <td class="r">651.5億円</td>
+                <td class="r">4.22億円</td>
+                <td class="r">23.7倍</td>
+                <td>
+                  参考。<span class="badge b-fact">事実</span>（2026/10/27
+                  組織再編開示）
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  合併後の「株式会社ウィルオブ」（コンストラクションとの単純合算）
+                </td>
+                <td class="r">825.6億円</td>
+                <td class="r">14.8億円</td>
+                <td class="r">6.8倍</td>
+                <td>
+                  参考。コンストラクション単体は売上174.1億円・営業利益10.55億円
+                </td>
+              </tr>
+              <tr class="em">
+                <td>国内Workingセグメント利益（IFRS）</td>
+                <td class="r">882.6億円</td>
+                <td class="r">35.7億円</td>
+                <td class="r">2.8倍</td>
+                <td>
+                  本レポートの目標値。合併後のウィルオブ＋ウィルオブ・キャリア（旧HR
+                  CAREER）等
+                </td>
+              </tr>
+              <tr>
+                <td>ウィルグループ連結（IFRS）</td>
+                <td class="r">1,468.5億円</td>
+                <td class="r">32.7億円</td>
+                <td class="r">3.1倍</td>
+                <td>
+                  海外＋約26億円、本社費等▲約33億円と置くと、国内約107億円で連結100億円
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">
+          単体合算（14.8億円）と国内Working（35.7億円）の差の内訳は開示されていません。本社費の負担、会計基準の違い（日本基準とIFRS）、国内の他子会社分が含まれていると推定します。目標年度の2031年3月期は2030年4月〜2031年3月で、決算発表は2031年5月の見込み＝今から5年以内に収まります。
+        </p>
+      </section>
+
+      <!-- 3 -->
+      <section id="s3">
+        <h2><span class="num">3</span>現状診断</h2>
+        <p class="lead">
+          売上は伸びているのに利益率が2%台にとどまっています。一方で、国内の稼ぎ方の入れ替えは成果が出始めています。
+        </p>
+
+        <h3>
+          ウィルグループ連結の5期推移 <span class="badge b-fact">事実</span>
+        </h3>
+        <div class="tbl">
+          <table>
+            <thead>
+              <tr>
+                <th>期</th>
+                <th class="r">売上収益</th>
+                <th class="r">売上総利益</th>
+                <th class="r">営業利益</th>
+                <th class="r">営業利益率</th>
+                <th class="r">ノーマライズド営業利益</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2022年3月期</td>
+                <td class="r">1,310.8</td>
+                <td class="r">287.6</td>
+                <td class="r">54.7</td>
+                <td class="r">4.2%</td>
+                <td class="r">―</td>
+              </tr>
+              <tr>
+                <td>2023年3月期</td>
+                <td class="r">1,439.3</td>
+                <td class="r">317.3</td>
+                <td class="r">53.1</td>
+                <td class="r">3.7%</td>
+                <td class="r">―</td>
+              </tr>
+              <tr>
+                <td>2024年3月期</td>
+                <td class="r">1,382.2</td>
+                <td class="r">304.4</td>
+                <td class="r">45.2</td>
+                <td class="r">3.3%</td>
+                <td class="r">17.9</td>
+              </tr>
+              <tr>
+                <td>2025年3月期</td>
+                <td class="r">1,397.0</td>
+                <td class="r">293.8</td>
+                <td class="r">23.3</td>
+                <td class="r">1.7%</td>
+                <td class="r">22.6</td>
+              </tr>
+              <tr class="em">
+                <td>2026年3月期</td>
+                <td class="r">1,468.5</td>
+                <td class="r">323.9</td>
+                <td class="r">32.7</td>
+                <td class="r">2.2%</td>
+                <td class="r">30.0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">
+          単位：億円。セグメント別（2026年3月期）は国内Working
+          売上882.6・利益35.7、海外Working
+          売上585.0・利益24.2。2027年3月期の会社予想は連結営業利益34.0億円（国内Working
+          42.9億円）。第1四半期の営業利益は9.3億円（前年同期比+135.6%）で、上期予想は21.3億円へ上方修正済み。
+        </p>
+
+        <h3>国内で起きている入れ替え <span class="badge b-fact">事実</span></h3>
+        <div class="tbl">
+          <table>
+            <thead>
+              <tr>
+                <th>指標</th>
+                <th class="r">2023年3月期</th>
+                <th class="r">2026年3月期</th>
+                <th class="r">年平均の伸び</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>国内Working 売上総利益（率）</td>
+                <td class="r">155億円（18.5%）</td>
+                <td class="r">191.7億円（21.7%）</td>
+                <td class="r">+7.3%</td>
+              </tr>
+              <tr>
+                <td>
+                  重点3事業（正社員派遣／請負・外国人雇用支援・人材紹介）の売上総利益構成比
+                </td>
+                <td class="r">39.4%</td>
+                <td class="r">61.2%</td>
+                <td class="r">―</td>
+              </tr>
+              <tr>
+                <td>正社員派遣／請負の在籍人数</td>
+                <td class="r">3,923名</td>
+                <td class="r">6,878名</td>
+                <td class="r">+20.6%</td>
+              </tr>
+              <tr>
+                <td>外国人雇用支援人数</td>
+                <td class="r">1,750名</td>
+                <td class="r">4,626名</td>
+                <td class="r">+38.3%</td>
+              </tr>
+              <tr>
+                <td>人材紹介の入社人数</td>
+                <td class="r">3,361名</td>
+                <td class="r">4,741名</td>
+                <td class="r">+12.2%</td>
+              </tr>
+              <tr>
+                <td>建設技術者領域の営業利益</td>
+                <td class="r">▲5.2億円</td>
+                <td class="r">12.1億円</td>
+                <td class="r">黒字化</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">
+          コールセンター領域の四半期売上は42.2億円（2022年3月期第1四半期）から27.0億円（2026年3月期第4四半期）へ縮小しています（決算補足資料のグラフからの読み取り）。
+        </p>
+
+        <div class="grid2">
+          <div class="card">
+            <h3 style="margin-top: 0">使える資産</h3>
+            <ul>
+              <li>登録スタッフ約97万名、取引先4,850社、全国50以上の拠点</li>
+              <li>
+                外国人雇用支援の実装力（会社は「業界トップクラス」と表記。インドネシア・ベトナムに送出し網。トランスジャカルタとMOU）
+              </li>
+              <li>
+                建設技術者領域を3年で黒字化した採用・育成・定着の型。2027年4月からは同領域を率いた田中謙氏が新会社の社長に就任予定
+              </li>
+              <li>
+                合併による一体運営と、実質ネットキャッシュ約20億円・営業キャッシュフロー49.5億円の財務余力
+              </li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3 style="margin-top: 0">足かせ</h3>
+            <ul>
+              <li>単体の営業利益率0.65%、国内Working全体でも約4.0%</li>
+              <li>コールセンター領域の縮小と、生成AIによる定型業務の代替</li>
+              <li>
+                最低賃金の上昇（2026年度+56円、年約5%）に派遣料金の上昇（+3.6%）が追いつかない
+              </li>
+              <li>
+                のれん98.5億円は自己資本202.4億円の約半分。大型買収の余力は限られる
+              </li>
+              <li>
+                社員口コミは5点満点で2.9（キャリコネ、718件）。給与が低め・早期離職の声が目立ち、内勤社員の生産性と定着が課題
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4 -->
+      <section id="s4">
+        <h2><span class="num">4</span>外部環境：伸びる所と縮む所</h2>
+        <p class="lead">
+          人手不足の中心は介護・ドライバー・建設・販売などの現場の仕事です。中期経営計画が掲げる「エッセンシャル領域（社会に不可欠でAIに置き換わりにくい仕事）×正社員・外国人HR」は、外部環境と合っています。ずれがあるのは、コールセンターと事務の扱いです。
+        </p>
+        <div class="tbl">
+          <table>
+            <thead>
+              <tr>
+                <th>区分</th>
+                <th>主な数字 <span class="badge b-fact">事実</span></th>
+                <th>5年計画への意味</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><b>人手不足</b></td>
+                <td>
+                  2030年に341.5万人、2040年に1,100.4万人の供給不足。2040年の不足率は介護25.3%、販売24.8%、ドライバー24.2%、建設22.0%（リクルートワークス研究所）
+                </td>
+                <td>正社員派遣／請負と紹介の需要は続く</td>
+              </tr>
+              <tr>
+                <td><b>外国人材</b></td>
+                <td>
+                  外国人労働者257.1万人（2025年10月、前年比+11.7%）。受入れ枠は特定技能80万5,700人（2029年3月まで）＋育成就労
+                  約43万人（2027年4月施行）。外食は上限に達し、2026年4月から認定証明書の交付が止まった
+                </td>
+                <td>
+                  最大の伸びしろ。ただし分野ごとの上限が効くので、分野を分散させる
+                </td>
+              </tr>
+              <tr>
+                <td><b>人材紹介</b></td>
+                <td>
+                  民営職業紹介の手数料収入
+                  約9,835億円（前年度比+17.6%、厚労省速報）。ホワイトカラー紹介
+                  4,490億円（+12.0%、矢野経済研究所）
+                </td>
+                <td>
+                  利益率の高い事業として拡大する。医療・介護の手数料には上限規制の議論がある
+                  <span class="badge b-2nd">二次</span>
+                </td>
+              </tr>
+              <tr>
+                <td><b>IT人材</b></td>
+                <td>
+                  技術者派遣・紹介など4市場の合計
+                  1兆6,257億円（2025年度見込み、+8.9%）
+                </td>
+                <td>機電・IT技術者は正社員派遣の対象として伸ばす</td>
+              </tr>
+              <tr>
+                <td><b>BPO／コール</b></td>
+                <td>
+                  BPO
+                  5兆786億円（+4.0%）。うちコールセンターサービスは1兆517億円（−3.5%）
+                </td>
+                <td>人を派遣する形から、仕事を請け負う形（BPO）へ移す</td>
+              </tr>
+              <tr>
+                <td><b>派遣のコスト</b></td>
+                <td>
+                  派遣労働者
+                  約220万人（+3.9%）、派遣料金+3.6%。最低賃金は2026年度1,177円（+56円）。政府の目標は「2030年代前半に1,500円」
+                </td>
+                <td>
+                  料金に上乗せできない案件ほど利益が細る。単価改定を定例にする
+                </td>
+              </tr>
+              <tr>
+                <td><b>AI</b></td>
+                <td>
+                  令和8年版労働経済白書は「AIで雇用が大幅に減る裏付けはない」。派遣会社の71.7%が、3年後に派遣先から「AIを使える人材」を求められると回答（日本人材派遣協会）
+                </td>
+                <td>
+                  人の仕事は急にはなくならない。ただし定型のコール業務は頭打ちになる
+                </td>
+              </tr>
+              <tr>
+                <td><b>携帯・家電</b></td>
+                <td>
+                  キャリアショップは6,999店（2025年3月、3年で1,027店減）。ドコモは店舗での銀行口座開設支援を2030年に1,500拠点超へ広げる計画。ヤマダHDとエディオンが統合で基本合意
+                  <span class="badge b-2nd">二次</span>
+                </td>
+                <td>
+                  販売の現場は「売る」から「金融・法人・サポート」へ変わる
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 5 -->
+      <section id="s5">
+        <h2>
+          <span class="num">5</span>営業利益100億円を超えている会社の稼ぎ方
+        </h2>
+        <p class="lead">
+          派遣と紹介で営業利益100億円を超えている会社は、「売上1,600億円級×利益率6〜10%」の形です。本計画の2031年3月期の国内Workingは「売上約1,400億円×利益率約7.5%」で、UTグループとオープンアップの間に入ります。業界で前例のない水準ではありません。
+        </p>
+        <div class="tbl">
+          <table>
+            <thead>
+              <tr>
+                <th>企業（決算期）</th>
+                <th class="r">売上</th>
+                <th class="r">営業利益</th>
+                <th class="r">利益率</th>
+                <th>稼ぎ方・示唆</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>オープンアップグループ（2026年6月期）</td>
+                <td class="r">1,675億円</td>
+                <td class="r">167億円</td>
+                <td class="r">10.0%</td>
+                <td>
+                  機電・IT・建設の技術者派遣。2021年の経営統合で技術者の数を確保し、中堅層へ寄せて単価を上げた
+                </td>
+              </tr>
+              <tr>
+                <td>UTグループ（2026年3月期）</td>
+                <td class="r">1,669億円</td>
+                <td class="r">106億円</td>
+                <td class="r">6.4%</td>
+                <td>
+                  正社員型の製造派遣。技術職の人数が減っても、単価交渉と募集費の管理で営業利益+46.3%（事業売却の影響を除く）
+                </td>
+              </tr>
+              <tr>
+                <td>トライト（2024年12月期）</td>
+                <td class="r">571億円</td>
+                <td class="r">52億円</td>
+                <td class="r">9.1%</td>
+                <td>
+                  医療福祉の紹介・派遣。カーライルが約874億円で取得（営業利益の約17倍）
+                </td>
+              </tr>
+              <tr>
+                <td>エス・エム・エス（2026年3月期）</td>
+                <td class="r">647億円</td>
+                <td class="r">68億円</td>
+                <td class="r">10.5%</td>
+                <td>
+                  介護の人材紹介＋介護事業者向けSaaS。海外買収で約230億円の減損（M&Aの反面教師）
+                </td>
+              </tr>
+              <tr>
+                <td>ディップ（2026年2月期）</td>
+                <td class="r">549億円</td>
+                <td class="r">91億円</td>
+                <td class="r">16.6%</td>
+                <td>
+                  求人メディア。利益率は23.8%から16.6%へ低下し、変動が大きい
+                </td>
+              </tr>
+              <tr>
+                <td>パーソルHD（2026年3月期）</td>
+                <td class="r">1兆5,558億円</td>
+                <td class="r">665億円</td>
+                <td class="r">4.3%</td>
+                <td>総合人材。規模があっても利益率は4%台</td>
+              </tr>
+              <tr class="em">
+                <td>ウィルグループ（2026年3月期）</td>
+                <td class="r">1,468.5億円</td>
+                <td class="r">32.7億円</td>
+                <td class="r">2.2%</td>
+                <td>
+                  国内の利益率は約4%。売上規模はすでにUTやオープンアップに近い
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">
+          他社の数字は証券会社サイト（マネックス、松井証券）等を経由した<span
+            class="badge b-2nd"
+            >二次</span
+          >情報です。トライトの倍率は「株式取得総額÷営業利益」の計算値で、純有利子負債は考慮していません。
+        </p>
+        <div class="card">
+          <h3 style="margin-top: 0">ここから言えること</h3>
+          <ul>
+            <li>
+              <b>利益率の型を変えれば届く。</b
+              >ウィルグループは売上規模ではすでに上位社と並んでいる。差は利益率で、技術者派遣（10%）と紹介（9〜10%）の比率が決め手になる
+            </li>
+            <li>
+              <b>単価と募集費だけで利益は動く。</b
+              >UTグループは人数が減っても増益した。最低賃金が上がる局面では、単価改定を年中行事にできるかで差がつく
+            </li>
+            <li>
+              <b>M&Aは「小さく・非上場・高利益率」に寄せる。</b
+              >上場企業の買収は営業利益の約17倍と高く、減損の前例もある
+            </li>
+            <li>
+              <b
+                >求人メディアやSaaSを新しく立ち上げて100億円を狙うのは筋が悪い。</b
+              >利益率は高いが変動が大きく、大手との競争も激しい
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 6 -->
+      <section id="s6">
+        <h2><span class="num">6</span>推奨する事業ポートフォリオ</h2>
+        <p class="lead">
+          事業ごとに「伸ばす・変える・買う・絞る」の役割を決め、経営資源の配分をそれに合わせます。全事業に共通する土台として、AIオペレーションを敷きます。KPIの2031年3月期の数値は、すべて当方の目標案
+          <span class="badge b-est">試算</span> です。
+        </p>
+        <div class="legend">
+          <span class="c-grow"><i></i>伸ばす</span
+          ><span class="c-change"><i></i>変える</span
+          ><span class="c-buy"><i></i>買う</span
+          ><span class="c-trim"><i></i>絞る</span
+          ><span class="c-ai"><i></i>横断の土台</span>
+        </div>
+
+        <div class="roles">
+          <div class="role c-grow">
+            <div class="head">
+              <span class="tag">伸ばす①</span>
+              <h4>正社員派遣／請負（建設・機電・IT・介護・物流）＝最大の柱</h4>
+            </div>
+            <div class="kpi">
+              KPI：在籍 6,878名 →
+              <b>14,000名</b>（年+15%。2023→26年の実績は年+20.6%）
+            </div>
+            <ul>
+              <li>
+                建設技術者で確立した「採用・育成・定着」の型を、合併を機に機電・IT・介護・物流ドライバーへ広げる
+              </li>
+              <li>
+                未経験者を育成してから正社員として派遣する「育成型」（デジたまの型）を、年1,000名規模まで広げる
+              </li>
+              <li>単価改定を年2回の定例にし、最低賃金の上昇分を料金に乗せる</li>
+            </ul>
+            <p class="why">
+              根拠：会社開示によると、正社員派遣／請負の売上総利益率は21〜28%、営業利益率は8〜15%（一般派遣は14〜17%、5〜10%）。他社では、オープンアップが技術者派遣で利益率10.0%を出している。
+            </p>
+          </div>
+
+          <div class="role c-grow">
+            <div class="head">
+              <span class="tag">伸ばす②</span>
+              <h4>
+                外国人HR（特定技能・育成就労からの移行・定着支援）＝最大の伸びしろ
+              </h4>
+            </div>
+            <div class="kpi">
+              KPI：支援人数 4,626名 →
+              <b>15,000名</b
+              >（年+26.5%。受入れ枠は合計で最大約123万人なので、15,000名はその約1.2%）
+            </div>
+            <ul>
+              <li>
+                2027年4月の育成就労の開始に合わせ、送出し国での日本語教育・事前研修から、入国後の生活支援、特定技能への移行までを一貫したモデルにする
+              </li>
+              <li>
+                上限に達した外食への依存を避け、介護・建設・物流・製造・宿泊へ分散する
+              </li>
+              <li>
+                面談・届出・生活相談を多言語AIで省力化し、支援担当1人あたりの受け持ち人数を増やす
+              </li>
+            </ul>
+            <p class="why">
+              根拠：会社開示によると、外国人雇用支援の営業利益率は10〜25%。外国人労働者は年+11.7%で増えている。注意点として、育成就労の監理を担う「監理支援機関」は非営利法人に限られる見込み（要確認）。株式会社としては、登録支援機関・職業紹介・教育・生活支援の立場で関わる。
+            </p>
+          </div>
+
+          <div class="role c-grow">
+            <div class="head">
+              <span class="tag">伸ばす③</span>
+              <h4>人材紹介（医療福祉・建設・IT・ドライバー）</h4>
+            </div>
+            <div class="kpi">
+              KPI：紹介入社 4,741名 → <b>10,000名</b>（年+16%）
+            </div>
+            <ul>
+              <li>
+                ウィルオブ・キャリア（2027年4月〜、旧HR
+                CAREER）の運営の型を、介護・看護から建設・IT・ドライバーへ広げる
+              </li>
+              <li>
+                派遣スタッフが派遣先の正社員になる転換を、紹介の収益にする（UTグループは同様の取り組みで紹介の成約を+44%）
+              </li>
+              <li>97万名の登録データをAIで掘り起こし、求人広告費を抑える</li>
+            </ul>
+            <p class="why">
+              根拠：会社開示によると、人材紹介の営業利益率は15〜30%。医療・介護は手数料規制のリスクがあるため、建設・IT・ドライバーへ分散しておく。
+            </p>
+          </div>
+
+          <div class="role c-change">
+            <div class="head">
+              <span class="tag">変える</span>
+              <h4>コール／セールス →「AI×有人」BPO・成果型の営業代行</h4>
+            </div>
+            <div class="kpi">
+              KPI：コール・セールス領域の売上のうち、請負／BPOの比率を
+              <b>5割以上</b>、営業利益率 <b>8〜10%</b> を目標
+            </div>
+            <ul>
+              <li>
+                AIが一次応対・要約・後処理を担い、人は難しい応対に集中する「AI×有人」のコンタクトセンターを、請負として提供する（パーソルビジネスプロセスデザインの「傾聴AIエージェント」運用が先行例）
+              </li>
+              <li>
+                キャリアショップ・家電量販向けの販売人材を、金融・法人・サポート窓口の人材へ切り替える
+              </li>
+              <li>
+                営業代行「セイヤク」を、成果報酬型のインサイドセールスBPOとして広げる
+              </li>
+            </ul>
+            <p class="why">
+              根拠：コールセンターサービスの市場は−3.5%、BPO全体は+4.0%。派遣のままでは縮む領域だが、請負に変えれば成長領域に乗れる。
+            </p>
+          </div>
+
+          <div class="role c-buy">
+            <div class="head">
+              <span class="tag">買う</span>
+              <h4>M&A：5年で約170億円、取得する営業利益は約17億円</h4>
+            </div>
+            <div class="kpi">
+              優先順位：①建設・機電の技術者派遣　②医療福祉・建設の紹介会社　③登録支援機関（約1.1万機関に分散＝束ねる余地あり
+              <span class="badge b-2nd">二次</span>）　④業界特化型のBPO
+            </div>
+            <ul>
+              <li>
+                中期経営計画の規律「買収後3年以内に資本コストを明確に上回る案件だけ」を続け、取得価格は営業利益の平均10倍程度に抑える
+              </li>
+              <li>
+                のれん÷自己資本に上限（例：80%）を置く。アーンアウト（業績連動の後払い）を使い、上場企業の高倍率案件は追わない
+              </li>
+              <li>海外の拡大M&Aは、国内で100億円に届くまで後回しにする</li>
+            </ul>
+            <p class="why">
+              根拠：中期経営計画のM&A予算は3年で100億円（技術者派遣・業界特化BPOが対象）。自社でも豪州子会社ののれんを4.7億円減損した経験がある（2025年3月期）。
+            </p>
+          </div>
+
+          <div class="role c-trim">
+            <div class="head">
+              <span class="tag">絞る</span>
+              <h4>料金を上げられない一般派遣・保育・定型コール派遣</h4>
+            </div>
+            <ul>
+              <li>
+                一般派遣（有期）は、料金改定が通らない案件の撤退基準を決める（例：粗利率12%未満で改善の見込みがない案件）
+              </li>
+              <li>
+                保育は人材サービス市場が前年割れのため、拡大投資は止め、紹介を中心に維持する
+              </li>
+              <li>
+                定型のコールセンター派遣は、AIによる代替が最初に来る。BPOへ移すか、縮小する
+              </li>
+            </ul>
+            <p class="why">
+              捻出した営業人員と採用費は、伸ばす3本へ振り向ける。
+            </p>
+          </div>
+
+          <div class="role c-ai">
+            <div class="head">
+              <span class="tag">横断の土台</span>
+              <h4>AIオペレーション：販管費÷売上総利益を81%から約70%へ</h4>
+            </div>
+            <div class="kpi">
+              中期経営計画どおりでも約78%（2029年3月期：販管費196億円÷売上総利益250億円）。そこからさらに約9ポイント下げる
+            </div>
+            <ul>
+              <li>
+                応募受付・面談調整・書類選考・シフト作成・勤怠／給与／請求・スタッフからの問い合わせを、AIで自動化する
+              </li>
+              <li>
+                合併に合わせてバックオフィスとシステムを統合し、重複している本社機能をなくす
+              </li>
+              <li>
+                募集費を、自社の登録データの再活用とAIによる広告の最適化で下げる。離職の兆しを早く見つけて、定着率を上げる（建設技術者の定着率は70.8%）
+              </li>
+            </ul>
+            <p class="why">
+              既にある取り組み：生成AI-OCR（年約2,500時間の削減見込み）、介護向けAIシフト作成「miramos」、スタッフ向け生成AIチャットボット「ウィルキャリ」。これらを点の施策で終わらせず、全社の業務設計に組み込む。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7 -->
+      <section id="s7">
+        <h2><span class="num">7</span>100億円への道筋</h2>
+        <p class="lead">
+          国内Workingのセグメント利益を、2026年3月期の35.7億円から2031年3月期の約106億円まで積み上げます。単位は億円で、2026年3月期実績以外はすべて<span
+            class="badge b-est"
+            >試算</span
+          >です。
+        </p>
+
+        <div
+          class="wf"
+          id="wf"
+          role="img"
+          aria-label="国内Working利益の積み上げ。35.7億円から中計どおりの成長と延長で75.7億円、AIオペレーション、単価、新事業、M&Aを加え、逆風を差し引いて105.7億円"
+        >
+          <div class="legend">
+            <span style="--c: var(--total)"><i></i>実績・到達点</span
+            ><span style="--c: var(--sub)"><i></i>中計延長線</span
+            ><span style="--c: var(--pos)"><i></i>上積み</span
+            ><span style="--c: var(--neg)"><i></i>差し引き</span
+            ><span style="--c: var(--accent)"
+              ><i
+                style="
+                  background: none;
+                  border-left: 2px dashed var(--accent);
+                  width: 2px;
+                  border-radius: 0;
+                "
+              ></i
+              >100億円</span
+            >
+          </div>
+          <div id="wf-rows"></div>
+          <div class="wf-axis">
+            <div></div>
+            <div class="wf-ticks" id="wf-ticks"></div>
+          </div>
+        </div>
+
+        <h3>試算の前提</h3>
+        <div class="tbl">
+          <table>
+            <thead>
+              <tr>
+                <th>項目</th>
+                <th>前提</th>
+                <th class="r">2031年3月期への寄与</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>中期経営計画どおりの成長</td>
+                <td>2029年3月期に国内Working利益54億円（会社計画）</td>
+                <td class="r">+18.3</td>
+              </tr>
+              <tr>
+                <td>中期経営計画の延長</td>
+                <td>
+                  重点3事業の売上総利益：2029年3月期187.5億円（250億円×75%）から年+14%（計画期間中は年+16.9%）。その他の売上総利益：62.5億円から年−5%。販管費：196億円から年+7%（計画期間中は年+7.9%）
+                </td>
+                <td class="r">+21.7</td>
+              </tr>
+              <tr>
+                <td>AIオペレーション</td>
+                <td>2031年3月期の販管費を、成り行きより約5%（約11億円）圧縮</td>
+                <td class="r">+11</td>
+              </tr>
+              <tr>
+                <td>単価・案件構成の入れ替え</td>
+                <td>販管費を増やさずに、売上総利益を+4億円</td>
+                <td class="r">+4</td>
+              </tr>
+              <tr>
+                <td>新事業（AI×有人BPOなど）</td>
+                <td>売上総利益15億円、販管費9億円</td>
+                <td class="r">+6</td>
+              </tr>
+              <tr>
+                <td>M&A</td>
+                <td>
+                  売上総利益55億円、販管費38億円を取り込む（取得額は約170億円）
+                </td>
+                <td class="r">+17</td>
+              </tr>
+              <tr>
+                <td>逆風の控除</td>
+                <td>
+                  最低賃金の転嫁遅れ、制度変更、実行の遅れに対するバッファ
+                </td>
+                <td class="r">−8</td>
+              </tr>
+              <tr class="em">
+                <td>2031年3月期 基本シナリオ</td>
+                <td>
+                  売上総利益 約374億円、販管費
+                  約260億円（売上総利益の69.6%）。売上総利益率を26.5%と置くと売上は約1,410億円、営業利益率は約7.5%
+                </td>
+                <td class="r">105.7</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>年度ごとの到達点</h3>
+        <div
+          class="yb"
+          role="img"
+          aria-label="国内Working利益の年度推移。2026年3月期35.7、2027年3月期42.9（会社予想）、2028年3月期50、2029年3月期60、2030年3月期82、2031年3月期106億円"
+        >
+          <div class="legend">
+            <span style="--c: var(--sub)"><i></i>実績</span
+            ><span style="--c: var(--total)"
+              ><i style="opacity: 0.6"></i>会社予想</span
+            ><span style="--c: var(--total)"><i></i>本計画（試算）</span
+            ><span class="yb-leg-line"
+              ><i
+                style="
+                  background: none;
+                  border-top: 2px dashed var(--accent);
+                  height: 0;
+                  width: 22px;
+                  border-radius: 0;
+                "
+              ></i
+              >100億円</span
+            ><span class="yb-leg-line"
+              ><i
+                style="
+                  background: none;
+                  border-top: 2px dashed var(--muted);
+                  height: 0;
+                  width: 22px;
+                  border-radius: 0;
+                "
+              ></i
+              >中計 54億円</span
+            >
+          </div>
+          <div class="yb-plot" id="yb-plot"></div>
+          <div class="yb-x" id="yb-x"></div>
+        </div>
+
+        <h3>シナリオ別の着地</h3>
+        <div class="tbl">
+          <table>
+            <thead>
+              <tr>
+                <th>シナリオ</th>
+                <th class="r">国内Working利益</th>
+                <th class="r">連結営業利益の目安</th>
+                <th>条件</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>保守</td>
+                <td class="r">約70億円</td>
+                <td class="r">約62億円</td>
+                <td>
+                  中期経営計画の54億円は達成するが、その後の伸びは年+10%。AIの効果は半分で、M&Aは実行しない
+                </td>
+              </tr>
+              <tr class="em">
+                <td>基本</td>
+                <td class="r">約106億円</td>
+                <td class="r">約99億円</td>
+                <td>本計画のとおりに実行する</td>
+              </tr>
+              <tr>
+                <td>強気</td>
+                <td class="r">約126億円</td>
+                <td class="r">約119億円</td>
+                <td>
+                  技術者派遣の中型M&Aを1件追加し（+10億円）、外国人雇用支援が年+35%で伸び（+6億円）、AIの効果も上振れる（+4億円）
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">
+          連結は「国内Working＋海外Working 約26億円−本社費・その他
+          約33億円」で概算しています。連結100億円を確実に超えるには、国内Workingで約107億円が必要です。
+        </p>
+      </section>
+
+      <!-- 8 -->
+      <section id="s8">
+        <h2><span class="num">8</span>資金計画：M&A約170億円は賄えるか</h2>
+        <p class="lead">
+          賄えます。営業キャッシュフローだけでは約80億円足りませんが、借入で埋めても2031年3月期末の純有利子負債はEBITDAの約0.5倍に収まります。注意すべきなのは、借入よりも「のれん」の膨らみです。
+        </p>
+        <div class="tbl">
+          <table>
+            <thead>
+              <tr>
+                <th>5年累計（2027年3月期〜2031年3月期）</th>
+                <th class="r">金額</th>
+                <th>前提 <span class="badge b-est">試算</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>営業キャッシュフロー</td>
+                <td class="r">+300億円</td>
+                <td>2026年3月期の49.5億円から、年52→68億円へ増えると置く</td>
+              </tr>
+              <tr>
+                <td>リース負債の返済</td>
+                <td class="r">▲85億円</td>
+                <td>
+                  年約17億円（IFRSでは財務キャッシュフロー側。拠点の賃借が中心と推定）
+                </td>
+              </tr>
+              <tr>
+                <td>システム・AI投資</td>
+                <td class="r">▲60億円</td>
+                <td>既存の投資＋AIオペレーションへの追加投資</td>
+              </tr>
+              <tr>
+                <td>株主還元</td>
+                <td class="r">▲65億円</td>
+                <td>
+                  累進配当（現在は44円×約2,308万株で年約10億円）＋総還元性向30%以上
+                </td>
+              </tr>
+              <tr>
+                <td>M&A</td>
+                <td class="r">▲170億円</td>
+                <td>取得する営業利益 約17億円×約10倍</td>
+              </tr>
+              <tr class="em">
+                <td>差し引き（借入で調達）</td>
+                <td class="r">▲80億円</td>
+                <td>
+                  2026年3月期末の実質ネットキャッシュ約20億円から、純有利子負債
+                  約60億円へ
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card">
+          <h3 style="margin-top: 0">
+            2031年3月期末の財務の姿 <span class="badge b-est">試算</span>
+          </h3>
+          <ul>
+            <li>
+              純有利子負債 約60億円、EBITDA 約130億円の約0.5倍で、借入余力は十分
+            </li>
+            <li>
+              のれん 約240億円、自己資本
+              約340億円の約7割で、ここが最大の警戒点。買収先の業績が崩れると減損が利益を直撃する
+            </li>
+            <li>
+              中期経営計画のM&A予算（3年100億円）を、2030年3月期以降に追加の約70億円で延長する判断が要る。2029年3月期末に、1〜2件目の実績を見て決める
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 9 -->
+      <section id="s9">
+        <h2><span class="num">9</span>崩れやすい前提と備え</h2>
+        <p class="lead">
+          基本シナリオ（106億円）からの下振れ幅を見積もりました。余裕は約6億円しかありません。外国人雇用支援の伸びの鈍化か、M&Aの遅れのどちらか1つが起きるだけで100億円を割ります。この2つは、四半期ごとに兆しを追う管理項目にします。
+        </p>
+        <div class="tbl">
+          <table>
+            <thead>
+              <tr>
+                <th>崩れる前提</th>
+                <th class="r">2031年3月期への影響</th>
+                <th>備え</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  外国人雇用支援の伸びが半分になる（年+26.5%→+13%、15,000名→約8,500名）
+                </td>
+                <td class="r">▲10〜15億円</td>
+                <td>
+                  分野と送出し国を分散する。1人あたりの年間売上総利益は30万円と仮置き（支援単価は非開示）
+                </td>
+              </tr>
+              <tr>
+                <td>M&Aが2年遅れる</td>
+                <td class="r">▲12〜17億円</td>
+                <td>小型案件を先に実行し、候補20社のリストを常に持っておく</td>
+              </tr>
+              <tr>
+                <td>医療・介護の紹介手数料に上限規制が入る</td>
+                <td class="r">▲4〜6億円</td>
+                <td>建設・IT・ドライバーの紹介を先に育てる</td>
+              </tr>
+              <tr>
+                <td>
+                  最低賃金の上昇を料金に転嫁しきれない（一般派遣の粗利率が1ポイント下がる）
+                </td>
+                <td class="r">▲4〜5億円</td>
+                <td>年2回の単価改定と撤退基準</td>
+              </tr>
+              <tr>
+                <td>合併後の統合（PMI）が遅れ、販管費の削減が1年ずれ込む</td>
+                <td class="r">▲5億円</td>
+                <td>
+                  2027年4月の合併前に、業務とシステムの統合計画を確定しておく
+                </td>
+              </tr>
+              <tr>
+                <td>コール業務のAI代替が想定より速い</td>
+                <td class="r">▲3〜5億円</td>
+                <td>BPOへの転換を前倒しする</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">
+          影響額は当方の概算
+          <span class="badge b-est">試算</span>
+          です。基本シナリオの106億円は、「逆風の控除（−8億円）」を差し引いた後の値です。この控除で吸収できるのは、最低賃金・統合（PMI）の遅れ・コールのAI代替といった小さい項目（各▲3〜6億円）の1〜2項目までです。外国人とM&Aの下振れは吸収できないため、強気シナリオの要素（中型M&Aの追加）を予備として常に準備しておきます。
+        </p>
+      </section>
+
+      <!-- 10 -->
+      <section id="s10">
+        <h2><span class="num">10</span>実行計画と判定ライン</h2>
+        <p class="lead">
+          5年を3つの段階に分けます。段階の切れ目ごとに「合格ライン」を置き、届かなければ計画を組み直します。精神論で目標を持ち越さないための仕組みです。
+        </p>
+        <div class="phase">
+          <div class="card">
+            <div class="when">2026年11月〜2027年3月</div>
+            <h4>土台づくり（合併までの5か月）</h4>
+            <ul>
+              <li>
+                「100億円の物差し」を国内Workingのセグメント利益で確定し、事業別の損益を見える化する
+              </li>
+              <li>合併後の組織・業務・システム統合計画を確定する</li>
+              <li>単価改定の定例化と、低採算案件の洗い出しを行う</li>
+              <li>M&A候補20社のリストを作り、1件目の小型案件に着手する</li>
+              <li>育成就労（2027年4月施行）に対応したモデルを準備する</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="when">2028年3月期〜2029年3月期</div>
+            <h4>中期経営計画の達成と前倒し</h4>
+            <ul>
+              <li>AIオペレーションを全拠点に展開する</li>
+              <li>コールの「AI×有人」BPOを商品化する</li>
+              <li>M&Aを2〜3件実行する（累計約100億円）</li>
+              <li>外国人雇用支援を1万名へ、正社員派遣／請負を1万名へ</li>
+              <li>国内Working利益は50億円→60億円</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="when">2030年3月期〜2031年3月期</div>
+            <h4>規模の拡大</h4>
+            <ul>
+              <li>技術者派遣の中型M&Aを実行する（M&A枠を約70億円追加）</li>
+              <li>外国人雇用支援1.5万名、紹介入社1万名</li>
+              <li>販管費÷売上総利益を約70%へ</li>
+              <li>国内Working利益は82億円→106億円</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tbl">
+          <table>
+            <thead>
+              <tr>
+                <th>判定時期</th>
+                <th>合格ライン <span class="badge b-est">試算</span></th>
+                <th>届かなかったら</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2028年3月期末</td>
+                <td>
+                  国内Working利益50億円以上／販管費÷売上総利益78%以下／外国人雇用支援7,500名以上
+                </td>
+                <td>
+                  M&Aを小型の分散型に切り替え、目標年度を1年後ろ倒し（2032年3月期）にするかを判断
+                </td>
+              </tr>
+              <tr>
+                <td>2029年3月期末</td>
+                <td>
+                  国内Working利益58億円以上（中期経営計画の54億円を超える）／M&Aの累計実行額
+                  約100億円
+                </td>
+                <td>次期中期経営計画で、100億円の達成年度を再設定する</td>
+              </tr>
+              <tr>
+                <td>2030年3月期末</td>
+                <td>国内Working利益80億円以上</td>
+                <td>強気シナリオの要素（中型M&Aの追加）を発動するかを判断</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card">
+          <h3 style="margin-top: 0">やらないこと</h3>
+          <ul>
+            <li>
+              求人メディアやHR SaaSを新しく立ち上げて、100億円の主役にすること
+            </li>
+            <li>営業利益の15倍を超えるような上場企業の買収</li>
+            <li>
+              国内で100億円に届く前に、海外の拡大M&Aに資金を振り向けること
+            </li>
+            <li>
+              料金改定が通らない一般派遣を、売上を守るためだけに続けること
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- sources -->
+      <section id="s11">
+        <h2>出典と注記</h2>
+        <p class="lead">
+          一次資料（会社開示・官公庁）を優先しました。二次資料は表の中で<span
+            class="badge b-2nd"
+            >二次</span
+          >と示しています。
+        </p>
+        <div class="card src">
+          <h3 style="margin-top: 0">一次資料</h3>
+          <ul>
+            <li>
+              ウィルグループ「グループ内組織再編（連結子会社間の合併、連結子会社２社の商号変更及び連結子会社の代表取締役の異動）に関するお知らせ」2026年10月27日
+              <a href="https://www2.jpx.co.jp/disc/60890/140120261026556453.pdf"
+                >https://www2.jpx.co.jp/disc/60890/140120261026556453.pdf</a
+              >
+            </li>
+            <li>
+              ウィルグループ 中期経営計画「WILL-being 2029」
+              <a href="https://ssl4.eir-parts.net/doc/6089/tdnet/2811641/00.pdf"
+                >https://ssl4.eir-parts.net/doc/6089/tdnet/2811641/00.pdf</a
+              >
+            </li>
+            <li>
+              2026年3月期 決算短信
+              <a
+                href="https://www2.jpx.co.jp/disc/60890/081220260529554503_tse-acedifsm-60890-20260514360890-ixbrl.htm"
+                >https://www2.jpx.co.jp/disc/60890/081220260529554503_tse-acedifsm-60890-20260514360890-ixbrl.htm</a
+              >／決算補足資料
+              <a href="https://www2.jpx.co.jp/disc/60890/140120260514531749.pdf"
+                >https://www2.jpx.co.jp/disc/60890/140120260514531749.pdf</a
+              >
+            </li>
+            <li>
+              2027年3月期 第1四半期 決算短信
+              <a
+                href="https://www2.jpx.co.jp/disc/60890/081220260806513224_tse-qcedifsm-60890-20260807360890-ixbrl.htm"
+                >https://www2.jpx.co.jp/disc/60890/081220260806513224_tse-qcedifsm-60890-20260807360890-ixbrl.htm</a
+              >／補足資料
+              <a href="https://www2.jpx.co.jp/disc/60890/140120260806513050.pdf"
+                >https://www2.jpx.co.jp/disc/60890/140120260806513050.pdf</a
+              >
+            </li>
+            <li>
+              ウィルグループ 業績ハイライト
+              <a href="https://willgroup.co.jp/ir/financial/summary/"
+                >https://willgroup.co.jp/ir/financial/summary/</a
+              >／ウィルオブ・ワーク 会社概要・事業紹介
+              <a href="https://willof-work.co.jp/corp/aboutus/"
+                >https://willof-work.co.jp/corp/aboutus/</a
+              >
+            </li>
+            <li>
+              厚生労働省 労働者派遣事業報告（令和6年度速報）
+              <a href="https://www.mhlw.go.jp/content/001684019.pdf"
+                >https://www.mhlw.go.jp/content/001684019.pdf</a
+              >／職業紹介事業報告
+              <a href="https://www.mhlw.go.jp/content/11600000/001683019.pdf"
+                >https://www.mhlw.go.jp/content/11600000/001683019.pdf</a
+              >／外国人雇用状況
+              <a href="https://www.mhlw.go.jp/stf/newpage_68794.html"
+                >https://www.mhlw.go.jp/stf/newpage_68794.html</a
+              >
+            </li>
+            <li>
+              リクルートワークス研究所「未来予測2040」
+              <a
+                href="https://www.works-i.com/research/report/item/forecast2040.pdf"
+                >https://www.works-i.com/research/report/item/forecast2040.pdf</a
+              >
+            </li>
+            <li>
+              矢野経済研究所 人材ビジネス
+              <a href="https://www.yano.co.jp/press-release/show/press_id/3942"
+                >https://www.yano.co.jp/press-release/show/press_id/3942</a
+              >／介護・医療・保育
+              <a href="https://www.yano.co.jp/press-release/show/press_id/4085"
+                >https://www.yano.co.jp/press-release/show/press_id/4085</a
+              >／BPO
+              <a href="https://www.yano.co.jp/press-release/show/press_id/3973"
+                >https://www.yano.co.jp/press-release/show/press_id/3973</a
+              >／コールセンター
+              <a href="https://www.yano.co.jp/press-release/show/press_id/3953"
+                >https://www.yano.co.jp/press-release/show/press_id/3953</a
+              >
+            </li>
+            <li>
+              労働政策研究・研修機構（最低賃金 2026年度）
+              <a
+                href="https://www.jil.go.jp/kokunai/blt/backnumber/2026/10/special_03.html"
+                >https://www.jil.go.jp/kokunai/blt/backnumber/2026/10/special_03.html</a
+              >
+            </li>
+          </ul>
+          <h3>二次資料</h3>
+          <ul>
+            <li>
+              他社業績：マネックス証券
+              銘柄スカウター、松井証券の決算ページ（UTグループ、オープンアップグループ、エス・エム・エス、ディップ、パーソルHD
+              ほか）
+            </li>
+            <li>
+              トライト買収
+              <a href="https://maonline.jp/news/20250610c"
+                >https://maonline.jp/news/20250610c</a
+              >／UTグループの業績要因
+              <a
+                href="https://news.mynavi.jp/techplus/article/20260521-4482431/"
+                >https://news.mynavi.jp/techplus/article/20260521-4482431/</a
+              >
+            </li>
+            <li>
+              育成就労・受入れ枠
+              <a href="https://www.rodo.co.jp/news/211244/"
+                >https://www.rodo.co.jp/news/211244/</a
+              >／外食の認定証明書交付停止
+              <a href="https://www.kaiketsu-j.com/?p=21483"
+                >https://www.kaiketsu-j.com/?p=21483</a
+              >
+            </li>
+            <li>
+              キャリアショップ店舗数
+              <a
+                href="https://k-tai.watch.impress.co.jp/docs/column/mca/2021449.html"
+                >https://k-tai.watch.impress.co.jp/docs/column/mca/2021449.html</a
+              >／ドコモの店舗金融
+              <a href="https://www.sbbit.jp/article/fj/186860"
+                >https://www.sbbit.jp/article/fj/186860</a
+              >
+            </li>
+            <li>
+              日本人材派遣協会の調査
+              <a href="https://kyodonewsprwire.jp/release/202610168107"
+                >https://kyodonewsprwire.jp/release/202610168107</a
+              >／労働経済白書の報道
+              <a href="https://kumanichi.com/articles/2032654"
+                >https://kumanichi.com/articles/2032654</a
+              >
+            </li>
+            <li>
+              社員口コミ（キャリコネ）
+              <a href="https://careerconnection.jp/review/71815/"
+                >https://careerconnection.jp/review/71815/</a
+              >／株価・時価総額（株探）
+              <a href="https://kabutan.jp/stock/?code=6089"
+                >https://kabutan.jp/stock/?code=6089</a
+              >
+            </li>
+          </ul>
+          <h3>注記</h3>
+          <ul>
+            <li>
+              本資料は公開情報と当方の試算による外部分析です。事業別の損益・支援単価などの社内数値は確認できておらず、試算の前提は仮置きです。投資判断を目的とした資料ではありません。
+            </li>
+            <li>
+              医療・介護の紹介手数料の上限規制、登録支援機関の数、監理支援機関の要件は、一次資料での確認が済んでいません（要確認）。
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="wrap">株式会社コミクス　作成日 2026年10月28日</div>
+    </footer>
+
+    <script>
+      (function () {
+        // 100億ブリッジ（横向きウォーターフォール）
+        var steps = [
+          { l: "2026年3月期 実績", v: 35.7, t: "total" },
+          { l: "中計どおりの成長（〜2029年3月期）", v: 18.3, t: "up" },
+          { l: "中計の延長（〜2031年3月期）", v: 21.7, t: "up" },
+          { l: "中計延長線", v: 75.7, t: "sub" },
+          { l: "AIオペレーション", v: 11, t: "up" },
+          { l: "単価・案件構成の入れ替え", v: 4, t: "up" },
+          { l: "新事業（AI×有人BPOなど）", v: 6, t: "up" },
+          { l: "M&A", v: 17, t: "up" },
+          { l: "逆風の控除", v: -8, t: "down" },
+          { l: "2031年3月期 基本シナリオ", v: 105.7, t: "total" },
+        ];
+        var MAX = 125,
+          rows = document.getElementById("wf-rows"),
+          run = 0;
+        function pct(x) {
+          return (x / MAX) * 100 + "%";
+        }
+        steps.forEach(function (s) {
+          var start, len, label;
+          if (s.t === "total" || s.t === "sub") {
+            start = 0;
+            len = s.v;
+            run = s.v;
+            label = s.v.toFixed(1);
+          } else if (s.t === "up") {
+            start = run;
+            len = s.v;
+            run += s.v;
+            label = "+" + s.v;
+          } else {
+            run += s.v;
+            start = run;
+            len = -s.v;
+            label = String(s.v);
+          }
+          var row = document.createElement("div");
+          row.className = "wf-row";
+          var lab = document.createElement("div");
+          lab.className =
+            "wf-lab" + (s.t === "total" || s.t === "sub" ? " tot" : "");
+          lab.textContent = s.l;
+          var tr = document.createElement("div");
+          tr.className = "wf-track";
+          var tg = document.createElement("div");
+          tg.className = "wf-target";
+          tg.style.left = pct(100);
+          tr.appendChild(tg);
+          var b = document.createElement("div");
+          b.className = "wf-bar " + s.t;
+          b.style.left = pct(start);
+          b.style.width = pct(len);
+          b.title =
+            s.l +
+            "：" +
+            label +
+            "億円" +
+            (s.t === "up" || s.t === "down"
+              ? "（累計 " + run.toFixed(1) + "億円）"
+              : "");
+          tr.appendChild(b);
+          var v = document.createElement("div");
+          v.className = "wf-val";
+          v.textContent = label;
+          var end = start + len;
+          if (end / MAX > 0.86) {
+            v.style.right = 100 - (start / MAX) * 100 + 1 + "%";
+          } else {
+            v.style.left = "calc(" + pct(end) + " + 8px)";
+          }
+          tr.appendChild(v);
+          row.appendChild(lab);
+          row.appendChild(tr);
+          rows.appendChild(row);
+        });
+        var ticks = document.getElementById("wf-ticks");
+        [0, 25, 50, 75, 100].forEach(function (t) {
+          var s = document.createElement("span");
+          s.style.left = pct(t);
+          s.textContent = t;
+          ticks.appendChild(s);
+        });
+
+        // 年度推移
+        var yrs = [
+          { x: "2026/3", v: 35.7, k: "act", n: "実績" },
+          { x: "2027/3", v: 42.9, k: "fc", n: "会社予想" },
+          { x: "2028/3", v: 50, k: "", n: "本計画" },
+          { x: "2029/3", v: 60, k: "", n: "本計画" },
+          { x: "2030/3", v: 82, k: "", n: "本計画" },
+          { x: "2031/3", v: 106, k: "", n: "本計画" },
+        ];
+        var YMAX = 120,
+          plot = document.getElementById("yb-plot"),
+          xs = document.getElementById("yb-x");
+        yrs.forEach(function (y) {
+          var c = document.createElement("div");
+          c.className = "yb-col";
+          var val = document.createElement("div");
+          val.className = "yb-v";
+          val.textContent = y.v % 1 ? y.v.toFixed(1) : y.v;
+          var b = document.createElement("div");
+          b.className = "yb-bar " + y.k;
+          b.style.height = (y.v / YMAX) * 100 + "%";
+          b.title = y.x + "期（" + y.n + "）：" + y.v + "億円";
+          c.appendChild(val);
+          c.appendChild(b);
+          plot.appendChild(c);
+          var xl = document.createElement("div");
+          var yy = document.createElement("span");
+          yy.className = "yy";
+          yy.textContent = y.x.slice(0, 2);
+          xl.appendChild(yy);
+          xl.appendChild(document.createTextNode(y.x.slice(2)));
+          var ki = document.createElement("span");
+          ki.className = "yy";
+          ki.textContent = "期";
+          xl.appendChild(ki);
+          xs.appendChild(xl);
+        });
+        [
+          { v: 100, c: "", t: "100億円" },
+          { v: 54, c: "mtp", t: "中計 54億円" },
+        ].forEach(function (l) {
+          var d = document.createElement("div");
+          d.className = "yb-line " + l.c;
+          d.style.bottom = (l.v / YMAX) * 100 + "%";
+          var s = document.createElement("span");
+          s.textContent = l.t;
+          d.appendChild(s);
+          plot.appendChild(d);
+        });
+      })();
+    </script>
+  </body>
+</html>
